@@ -6,3 +6,4 @@ git_source(:github) { |repo_name| "https://github.com/Jessocxz98/battle" }
 
 gem 'sinatra'
 gem 'webrick'
+gem 'sinatra-contrib'
