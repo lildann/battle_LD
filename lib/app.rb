@@ -11,6 +11,6 @@ end
 
 get '/cat' do
   "<div>
-  <img src='http://placekitten.com/500/500' alt='image of cat'>
+  <img src='https://i.imgur.com/jFaSxym.png' alt='image of cat'>
   </div>"
 end
