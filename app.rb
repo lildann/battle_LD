@@ -1,21 +1,24 @@
 require "sinatra"
 require "sinatra/reloader" if development?
 
-get '/' do
-  "hello! we can reload"
-end
+class Battle < Sinatra::Base 
+  configure :development do
+    register Sinatra::Reloader
+  end
 
-get '/secret' do
-  "expecting not to see this!!!!!"
-end
+  get '/' do
+    erb :index
+  end
 
-get '/random-cat' do
-  @name = ["Amigo", "Misty", "Almond"].sample
- erb(:index)
-end
+  post '/names' do
+    @player_1_name = params[:player_1_name]
+    @player_2_name = params[:player_2_name]
+    erb :play
+  end
 
-get '/named-cat' do
-  p params
-  @name = params[:name]
- erb(:index)
+  # get '/' do
+  #   "Testing infrastructure working!"
+  # end
+
+  run if app_file == $0
 end
