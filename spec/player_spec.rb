@@ -2,9 +2,9 @@ require 'player'
 
 describe Player do
 
-let :player1 { Player.new("Pikachu") }
+let(:pikachu)  { Player.new("Pikachu") }
 
   it 'can return its name' do
-    expect(subject.player1).to eq("Pikachu")
+    expect(pikachu.name).to eq("Pikachu")
   end
 end
