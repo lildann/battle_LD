@@ -17,12 +17,12 @@ describe Player do
     end
   end
 
-  context '#attack' do
-    it 'attacks the player' do
-      expect(jigglypuff).to receive(:receive_damage) 
-      pikachu.attack(jigglypuff)
-    end
-  end
+  # context '#attack' do
+  #   it 'attacks the player' do
+  #     expect(jigglypuff).to receive(:receive_damage) 
+  #     pikachu.attack(jigglypuff)
+  #   end
+  # end - test removed from Player spec as moved to Game spec
 
   context '#receive_damage' do
     it 'reduces player hit points' do
